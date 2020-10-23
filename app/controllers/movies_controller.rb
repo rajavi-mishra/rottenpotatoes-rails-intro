@@ -11,14 +11,15 @@ class MoviesController < ApplicationController
     @ratings_to_show = []
     @sort = ''
     
+    session[:ratings] = !params[:ratings].nil? ? params[:ratings] : session[:ratings]
+    session[:sort] = !params[:sort].nil? ? params[:sort] : session[:sort]
+    
     if (!params[:ratings].nil?)
       @ratings_to_show = params[:ratings].keys
-      session[:ratings] = @ratings_to_show
     end
     
     if (!params[:sort].nil?)
       @sort = params[:sort]
-      session[:sort] = @sort
     end
     
     if (params[:sort].nil? && params[:ratings].nil?)
