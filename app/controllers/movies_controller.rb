@@ -13,7 +13,7 @@ class MoviesController < ApplicationController
     
     if (!params[:ratings].nil?)
       @ratings_to_show = params[:ratings].keys
-      session[:ratings_to_show] = @ratings_to_show
+      session[:ratings] = @ratings_to_show
     end
     
     if (!params[:sort].nil?)
