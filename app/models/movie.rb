@@ -6,9 +6,8 @@ class Movie < ActiveRecord::Base
   
   def self.with_ratings(ratings_list)
     if (!ratings_list.nil?)
-      rv = Movie.where(:rating => ratings_list)
+      rv = Movie.where(rating: ratings_list)
       return rv
-    end
     else
       return Movie.all
     end
