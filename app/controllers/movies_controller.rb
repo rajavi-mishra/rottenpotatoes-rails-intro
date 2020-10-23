@@ -13,6 +13,7 @@ class MoviesController < ApplicationController
     
     if params[:ratings]
       ratings_to_show = params[:ratings].keys
+    end
   end
 
   def new
