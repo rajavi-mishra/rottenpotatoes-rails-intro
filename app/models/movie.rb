@@ -16,4 +16,5 @@ class Movie < ActiveRecord::Base
 #       return Movie.all
 #     end
 #   end
+  
 end
