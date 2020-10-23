@@ -1,12 +1,12 @@
 class Movie < ActiveRecord::Base
   
   def self.all_ratings():
-    return Array['G','PG','PG-13','R']
+    return ['G','PG','PG-13','R']
   end
   
   def self.with_ratings(ratings_list):
-    rv = Array[]
-    if ratings_list
+    rv = []
+    if (!ratings_list.nil?)
       ratings_list.each do |rating|
           rv.insert(Movie.where(params[:ratings]: rating.upcase))
       end
