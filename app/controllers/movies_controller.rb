@@ -33,7 +33,9 @@ class MoviesController < ApplicationController
     end
     
     @movies = Movie.with_ratings(@ratings_to_show).order(@sort)
-    return @movies
+    session.clear
+    
+    
   end
 
   def new
