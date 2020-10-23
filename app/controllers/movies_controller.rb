@@ -21,6 +21,7 @@ class MoviesController < ApplicationController
       @css_title = 'hilite bg-warning'
     elsif @sort_col == 'release_date'
       @css_release_date = 'hilite bg-warning'
+    end
   end
 
   def new
