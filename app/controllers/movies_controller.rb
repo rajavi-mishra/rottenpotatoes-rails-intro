@@ -23,9 +23,7 @@ class MoviesController < ApplicationController
     end
     
     if (params[:sort].nil? && params[:ratings].nil?)
-      @sort = session[:sort]
-      @ratings_to_show = session[:ratings]
-      redirect_to movies_path(sort: @sort, ratings: @ratings_to_show)
+      redirect_to movies_path(sort: session[:sort], ratings: session[:ratings])
     end
     
     if @sort == 'title'
