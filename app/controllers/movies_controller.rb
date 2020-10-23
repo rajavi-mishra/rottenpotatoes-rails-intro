@@ -27,7 +27,6 @@ class MoviesController < ApplicationController
       @css_release_date = 'hilite bg-warning'
     end
     @movies = Movie.with_ratings(session[:ratings_to_show]).order(session[:sort])
-    return @movies
   end
 
   def new
